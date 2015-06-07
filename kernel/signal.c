@@ -438,7 +438,7 @@ flush_signal_handlers(struct task_struct *t, int force_default)
 			ka->sa.sa_handler = SIG_DFL;
 		ka->sa.sa_flags = 0;
 #if defined(__ARCH_HAS_SA_RESTORER) || defined(SA_RESTORER)
-		ka->sa.sa_restorer = NULL;
+                ka->sa.sa_restorer = NULL;
 #endif
 		sigemptyset(&ka->sa.sa_mask);
 		ka++;
